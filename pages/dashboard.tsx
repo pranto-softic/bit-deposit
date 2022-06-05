@@ -1,6 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import type { NextPage } from "next";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import SearchIcon from "@mui/icons-material/Search";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import InputBase from "@mui/material/InputBase";
+import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -8,15 +13,10 @@ import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import InputBase from "@mui/material/InputBase";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import SearchIcon from "@mui/icons-material/Search";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import type { NextPage } from "next";
 import Container from "../components/container";
-import TopNavBar from "../components/top-nev-bar";
 import Tag from "../components/tag";
+import TopNavBar from "../components/top-nev-bar";
 
 const Dashboard: NextPage = () => {
   function createData(
@@ -126,6 +126,7 @@ const Dashboard: NextPage = () => {
   return (
     <div css={dashBoardCss}>
       <TopNavBar />
+
       <Container>
         <div className="title-search">
           <div className="title">Finanace</div>
