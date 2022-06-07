@@ -1,40 +1,56 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
-// import { useEffect } from "react";
-// import mq from "../lib/media-query";
-import EmailIcon from "@mui/icons-material/Email";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import Image from "next/image";
+import Link from "next/link";
+import headerLogo from "../assets/logo/Header_logo.svg";
+import ComponentButton from "./ComponentButton";
 
 const TopNavBar: NextPage = () => (
   //   useEffect(() => {});
 
   <div css={topNavBarCss}>
-    <div className="display-type">
-      <img src="./logo.png" alt="project logo" />
-      <div className="nav-link-list">
-        <a className="nav-link" href="/#">
-          {" "}
-          Home{" "}
-        </a>
-        <a className="nav-link" href="/#">
-          {" "}
-          About Us{" "}
-        </a>
-        <a className="nav-link" href="/#">
-          {" "}
-          Support{" "}
-        </a>
-        <a className="nav-link" href="/#">
-          {" "}
-          Instruction{" "}
-        </a>
+    <div className="display_type flex content_between item_center">
+      <div className="header_logo">
+        <Image src={headerLogo} alt="project logo" />
       </div>
-      <div className="icon-list">
-        <EmailIcon />
-        <NotificationsIcon style={{ marginLeft: 20 }} />
-        <AccountCircleIcon style={{ marginLeft: 20 }} />
+
+      <div className="nav_link_list flex">
+        <Link href="/#">Sports</Link>
+        <Link href="/#">Live</Link>
+        <Link href="/#">Games</Link>
+        <Link href="/#">Support</Link>
+        <Link href="/#">Instruction</Link>
+        <Link href="/#">Community</Link>
+
+        <div className="icon_list flex content_between item_center">
+          <ComponentButton
+            title="Login"
+            style={{
+              background: "#fff",
+              borderRadius: "4px",
+              color: "#352F7F",
+              textTransform: "capitalize",
+              fontWeight: "600",
+              fontSize: "14px",
+              padding: "2px 15px",
+              marginRight: "20px",
+            }}
+          />
+
+          <ComponentButton
+            title="Sign Up"
+            style={{
+              background: "#FFCC00",
+              borderRadius: "4px",
+              color: "#352F7F",
+              textTransform: "capitalize",
+              fontWeight: "600",
+              fontSize: "14px",
+              padding: "2px 15px",
+            }}
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -45,20 +61,22 @@ const topNavBarCss = css`
   padding-top: 20px;
   padding-left: 5%;
   padding-right: 5%;
-  background-color: #302a78;
-  .display-type {
+  background-color: #262260;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+  .display_type {
     display: flex;
     color: #ffffff;
-    .nav-link-list {
+
+    .nav_link_list {
       padding-left: 25%;
-      display: flex;
-      .nav-link {
-        padding-left: 20px;
+
+      a {
+        margin-right: 30px;
+        font-size: 15px;
+        font-weight: 600;
       }
     }
-  }
-  .icon-list {
-    margin-left: 5%;
   }
 `;
 

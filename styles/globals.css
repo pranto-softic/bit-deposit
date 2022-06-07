@@ -38,3 +38,6 @@ a {
 .item_center {
   align-items: center;
 }
+.text_center {
+  text-align: center;
+}

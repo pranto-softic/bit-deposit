@@ -34,7 +34,7 @@ const newsLetterCss = css`
   background-image: url(https://images.pexels.com/photos/589840/pexels-photo-589840.jpeg?cs=srgb&dl=pexels-valiphotos-589840.jpg&fm=jpg);
   background-repeat: no-repeat;
   padding: 80px 0;
-  margin: 40px 0;
+  margin-bottom: 80px;
 
   .sign_up_area {
     width: 70%;
