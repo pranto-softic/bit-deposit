@@ -1,14 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
+import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/partials/Footer";
 import TopNavBar from "../components/top-nev-bar";
+import UpComingMatch from "../components/UpComingMatch";
 import mq from "../lib/media-query";
 
 const Home: NextPage = () => (
   <>
     <div css={borderRedCss}>Bit deposit BD</div>
     <TopNavBar />
+    <UpComingMatch />
+    <NewsLetter />
 
     <Footer />
   </>
