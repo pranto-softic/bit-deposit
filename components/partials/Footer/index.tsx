@@ -160,6 +160,7 @@ const footerCss = css`
 
   .footer_grid_wrapper {
     color: #fff;
+    flex-wrap: wrap;
 
     .footer_single_grid {
       p {
