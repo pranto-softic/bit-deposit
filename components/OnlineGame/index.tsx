@@ -4,27 +4,28 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Grid, Typography } from "@mui/material";
 import { NextPage } from "next";
 import Image from "next/image";
-import casinoPlayImage from "../../assets/Casino_play_live_image.svg";
-import ComponentButton from "../ComponentButton/index";
+import onlinePlayImage from "../../assets/online-play-image.png";
+import ComponentButton from "../ComponentButton";
 import Container from "../container";
 
-const CasinoPlayLive: NextPage = () => (
-  <div css={CasinoPlayLiveCss}>
+const OnlineGame: NextPage = () => (
+  <div css={AffiliateProgramCss}>
     <Container>
       <Grid container className="flex content_center item_center">
         <Grid item xs={12} md={7} lg={7}>
-          <div className="casino_play_image">
-            <Image src={casinoPlayImage} />
+          <div className="casino_play_image flex content_start item_center">
+            <Image src={onlinePlayImage} />
           </div>
         </Grid>
+
         <Grid item xs={12} md={5} lg={5}>
-          <div className="flex content_end">
+          <div className="flex content_end item_center">
             <div className="casino_play_content">
               <Typography variant="h3">Play Live</Typography>
               <Typography variant="h2">Casino</Typography>
               <Typography variant="h4">worldwide!!</Typography>
 
-              <div className="flex content_end item_center">
+              <div className="flex content_start item_center">
                 <ComponentButton
                   title="Explore"
                   icon={
@@ -40,9 +41,9 @@ const CasinoPlayLive: NextPage = () => (
                     />
                   }
                   style={{
-                    background: "#FFCC00",
+                    background: "#302A78",
                     borderRadius: "4px",
-                    color: "#302A78",
+                    color: "#fff",
                     textTransform: "capitalize",
                     fontWeight: "600",
                     fontSize: "16px",
@@ -59,37 +60,10 @@ const CasinoPlayLive: NextPage = () => (
   </div>
 );
 
-const CasinoPlayLiveCss = css`
-  background: #07005b;
+const AffiliateProgramCss = css`
   margin-bottom: 70px;
-  padding: 60px 0px;
-
-  .casino_play_content {
-    color: #fff;
-
-    h2 {
-      color: #ffcc00;
-      font-weight: 700;
-      font-size: 124px;
-      line-height: 150px;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
-    }
-
-    h3 {
-      font-weight: 700;
-      font-size: 108px;
-      line-height: 92px;
-      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
-    }
-
-    h4 {
-      font-weight: 700;
-      font-size: 80px;
-      line-height: 92px;
-      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
-    }
-  }
+  background-color: #ffcc00;
+  padding-top: 40px;
 `;
 
-export default CasinoPlayLive;
+export default OnlineGame;

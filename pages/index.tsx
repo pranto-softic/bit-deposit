@@ -1,9 +1,11 @@
 /** @jsxImportSource @emotion/react */
 // import { css } from "@emotion/react";
 import type { NextPage } from "next";
+import AffiliateProgram from "../components/AffiliateProgram";
 import CasinoPlayLive from "../components/CasinoPlayLive";
 import HeroBanner from "../components/HeroBanner";
 import NewsLetter from "../components/NewsLetter";
+import OnlineGame from "../components/OnlineGame";
 import Footer from "../components/partials/Footer";
 import PaymentSystem from "../components/PaymentSystem";
 import TopNavBar from "../components/top-nev-bar";
@@ -16,6 +18,8 @@ const Home: NextPage = () => (
     <HeroBanner />
     <PaymentSystem />
     <CasinoPlayLive />
+    <AffiliateProgram />
+    <OnlineGame />
     <UpComingMatch />
     <NewsLetter />
     <Footer />

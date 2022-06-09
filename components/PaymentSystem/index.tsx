@@ -81,7 +81,9 @@ const PaymentSystem: NextPage = () => {
           {paymentSystemData?.length &&
             paymentSystemData.map((paymentItem) => (
               <div key={paymentItem?.id}>
-                <Image src={paymentItem?.paymentIcon} />
+                <div className="flex content_center item_center">
+                  <Image src={paymentItem?.paymentIcon} />
+                </div>
               </div>
             ))}
         </Slider>
@@ -92,8 +94,11 @@ const PaymentSystem: NextPage = () => {
 
 const PaymentSystemCss = css`
   margin-bottom: 70px;
-  background-color: #ffcc00;
   padding: 30px;
+  background-image: url("https://img.freepik.com/free-vector/abstract-halftone-background-theme_23-2148598184.jpg?w=1380");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
 
 export default PaymentSystem;
